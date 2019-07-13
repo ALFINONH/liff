@@ -12,8 +12,10 @@ const PSDI_CHARACTERISTIC_UUID  = '26E2B12B-85F0-4F3F-9FDD-91D114270E6E';
 let ledState = false; // true: LED on, false: LED off
 let clickCount = 0;
 
-window.onload = () => {
-    initializeApp();
+window.onload = function (e) {
+    liff.init(function () {
+        getP();
+    });
 };
 
 
@@ -260,13 +262,6 @@ function liffToggleDeviceLedState(state) {
         uiStatusError(makeErrorMsg(error), false);
     });
 }
-
-
-window.onload = function (e) {
-    liff.init(function () {
-        getP();
-    });
-};
 
 function getP(){
     var tipe = getParameterByName('type')
