@@ -1,111 +1,97 @@
-@keyframes noise{
-  0%{background-position:1000px;}
+body, table {
+  font-size: 14pt;
+  font-family: "Montserrat", sans-serif;
+  margin: 0pt;
+  text-align: center;
+  padding-top: 18pt;
 }
 
-body, html{
-overflow:hidden;
-margin:0px;
-background: #000000;
-height:100vh;
-box-shadow:0px 0px 122px 25px black inset;
-background-repeat:repeat;
-animation:noise 20ms linear infinite;
-
+p {
+    padding: 0pt 14pt;
 }
 
-.glitch-wrapper{
-padding-top:180px;
-width:100vw;
-text-align:center;
-animation:glitch 2s linear infinite;
-margin-bottom:110px;
+.btn {
+    padding: 2pt;
+    font-size: 14pt;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
 }
 
-
-.glitch-text, button{
-font-family: monospace;
-font-weight:bold;
+.btn-led-toggle {
+    box-shadow: 0 4pt 8pt 0 rgba(0,0,0,0.2), 0 3pt 10pt 0 rgba(0,0,0,0.19);
+    color: #f8f9fa; /* Light */
+    background-color: #6c757d; /* Gray */
+    width: 160pt;
+    font-weight: bold;
+    height: 40pt;
+    border: 2pt solid black;
+    border-radius: 8pt;
 }
 
-.glitch-text::before{
-content:'ERROR 404';
-color:black;
-text-shadow:0px 0px 5px 10px black!IMPORTANT;
--webkit-filter: blur(7px);
--moz-filter: blur(7px);
--o-filter: blur(7x);
--ms-filter: blur(7px);
-filter: blur(7px);
-display:block;
-position:absolute;
-z-index:-1;
-font-size:132px;
-left:0px;
-right:0px;
-margin-top:-30px;
-opacity:.5;
+.btn-led-toggle:active {
+    transform: translateY(4pt);
+    box-shadow: 0 2pt 4pt 0 rgba(0,0,0,0.2), 0 1pt 5pt 0 rgba(0,0,0,0.19);
+    background-color: #6c757d; /* Gray */
 }
 
-.glitch-text{
-position:relative;
-z-index:2;
-opacity:.9;
-margin:0 auto;
-text-shadow:0px 0px 3px white;
-animation:glitch 3s infinite;
-cursor:pointer;
-font-size:52px;
-color:white;
+.led-on, .led-on:active {
+    background-color: #16C464; /* LINE Green */
 }
 
-
-button{
-display:block;
-opacity:.6;
-box-shadow:0px 0px 3px 6px white,0px 0px 3px white;
-text-shadow:0px 0px 3px black;
-background:white;
-border:0px;
-padding:7px;
-margin:0 auto;
-outline:none;
-cursor:pointer;
-margin-top:30px;
-font-size:16px;
-transition:200ms;
+.btn-state {
+    box-shadow: 0pt 6pt #999;
+    border-radius: 4pt;
+    margin-bottom: 8pt;
+    width: 100pt;
+    border: 1pt solid #6c757d; /* Gray */
+    color: #6c757d; /* Gray */
+    background-color: #f8f9fa; /* Light */
 }
 
-button:hover, button:focus, button:active {
-box-shadow:0px 0px 3px 6px black;
-text-shadow:0px 0px 3px white;
-background:black;
-color:white;
-transition:200ms;
-border-top-left-radius:5px;
-border-bottom-right-radius:5px;
-}
- 
-
-.paused{
-animation-play-state: paused;
+.btn-state:active, .pressed {
+    color: #343a40; /* Dark */
+    border: 1pt solid #343a40; /* Dark */
+    box-shadow: 0 2pt #666;
+    transform: translateY(4pt);
 }
 
+.inactive {
+    color: #6c757d; /* Gray */
+}
 
-/* JUST RANDOM VALUES HERE! */
-@keyframes glitch{
- 3%{text-shadow:7px 7px 0px red;}
-6%{text-shadow:-9px 4px 0px blue;transform:translate(4px,-10px) skewX(3240deg);}
-7%{text-shadow:3px -4px 0px green;}
-9%{text-shadow:0px 0px 3px white;transform:translate(0px,0px) skewX(0deg);}
-2% , 54%{transform:translateX(0px) skew(0deg);}
-55%{transform:translate(-2px,6px) skew(-5530deg);}
-56%{text-shadow:0px 0px 3px white;transform:translate(0px,0px) skew(0deg);}
-57%{text-shadow:7px 7px 0px red;transform:translate(4px,-10px) skew(-70deg);}
-58%{text-shadow:0px 0px 3px white;transform:translate(0px,0px) skew(0deg);}
-62%{text-shadow:3px -4px 0px green;transform:translate(0px,20px) skew(0deg);}
-63%{text-shadow:0px 0px 3px white;transform:translate(4px,-2px) skew(0deg);}
-64%{transform:translate(1px,3px); skew(-230deg);}
-65%{transform:translate(-7px,2px); skew(120deg);}
-66%{transform:translate(0px,0px) skew(0deg);}
+.success {
+    color: #16C464; /* LINE Green */
+}
 
+.error {
+    color: #dc3545; /* Red */
+}
+
+.hidden {
+    display: none;
+}
+
+.device-info-table {
+    width: 80%;
+    margin: auto;
+    padding: 0;
+}
+
+.device-info-cell {
+    text-align: left;
+    vertical-align: middle;
+    padding-bottom: 8px;
+}
+
+.device-info-key {
+    padding-right: 10px;
+    word-wrap: none;
+}
+
+.device-info-val {
+    padding-left: 10px;
+    word-wrap: break-word;
+    max-width: 200px;
+    font-family: monospace, monospace;
 }
