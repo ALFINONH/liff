@@ -66,6 +66,7 @@ function getParameterByName(name, url) {
     if (!results[2]) return '';
     return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
+
 function getProfile(){
     liff.getProfile().then(function (profile) {
         document.getElementById('userid').textContent = 'Hai  ' + profile.displayName;
@@ -162,10 +163,10 @@ function meProfile(){
     liff.getProfile().then(function (prof) {
         var stat = prof.statusMessage;
         if (stat == null) {
-            var stat = " - ";
+            var stat = " Status sedang kosong alias kesepian";
         }
         if (stat.length > 999999999) {
-            var stat = "Status Message is to long! Max 9999999 words";
+            var stat = "Status Message is to long! Max 999999999 words";
         }
         if (tipe === 'profile') {
             liff.sendMessages([{
@@ -195,4 +196,66 @@ function meProfile(){
             });
         }
     });
+}
+
+function initializeApp(data) {
+    document.getElementById('useridfield').textContent = data.context.userId;
+    document.getElementById('utouidfield').textContent = data.context.utouId;
+    document.getElementById('roomidfield').textContent = data.context.roomId;
+    document.getElementById('groupidfield').textContent = data.context.groupId;
+
+    document.getElementById('openwindowbutton').addEventListener('click', function () {
+        liff.openWindow({
+            url: 'line://app/1604066537-dl9GVZzo?type=profile'
+        });
+    });
+
+    document.getElementById('closewindowbutton').addEventListener('click', function () {
+        liff.closeWindow();
+    });
+
+    document.getElementById('sendmessagebutton').addEventListener('click', function () {
+        liff.sendMessages([{
+            type: 'text',
+            text: "Hai KANG FINO..I LOVE YOU...WKWKWKWK!"
+        }, {
+            type: 'sticker',
+            packageId: '2',
+            stickerId: '144'
+        }]).then(function () {
+            window.alert("Message sent");
+        }).catch(function (error) {
+            window.alert("Error sending message: " + error);
+        });
+    });
+
+    document.getElementById('getprofilebutton').addEventListener('click', function () {
+        liff.getProfile().then(function (profile) {
+            document.getElementById('useridprofilefield').textContent = profile.userId;
+            document.getElementById('displaynamefield').textContent = profile.displayName;
+
+            var profilePictureDiv = document.getElementById('profilepicturediv');
+            if (profilePictureDiv.firstElementChild) {
+                profilePictureDiv.removeChild(profilePictureDiv.firstElementChild);
+            }
+            var img = document.createElement('img');
+            img.src = profile.pictureUrl;
+            img.alt = "Profile Picture";
+            profilePictureDiv.appendChild(img);
+
+            document.getElementById('statusmessagefield').textContent = profile.statusMessage;
+            toggleProfileData();
+        }).catch(function (error) {
+            window.alert("Error getting profile: " + error);
+        });
+    });
+}
+
+function toggleProfileData() {
+    var elem = document.getElementById('profileinfo');
+    if (elem.offsetWidth > 0 && elem.offsetHeight > 0) {
+        elem.style.display = "none";
+    } else {
+        elem.style.display = "block";
+    }
 }
