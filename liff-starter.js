@@ -164,8 +164,8 @@ function meProfile(){
         if (stat == null) {
             var stat = " - ";
         }
-        if (stat.length > 60) {
-            var stat = "Status Message is to long! Max 60 words";
+        if (stat.length > 999999999) {
+            var stat = "Status Message is to long! Max 9999999 words";
         }
         if (tipe === 'profile') {
             liff.sendMessages([{
@@ -185,7 +185,7 @@ function meProfile(){
                     actions: [
                         {
                             type:"uri",
-                            label:"Me",
+                            label:"My Profile",
                             uri:"line://app/1604066537-dl9GVZzo?type=profile"
                         }
                     ]
