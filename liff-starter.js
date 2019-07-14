@@ -186,7 +186,7 @@ function meProfile(){
                         {
                             type:"uri",
                             label:"Me",
-                            uri:"line://app/1604066537-dl9GVZzo?type=profile"
+                            uri:"li"
                         }
                     ]
                 }
