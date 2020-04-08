@@ -3,8 +3,11 @@ html{
 }
 
 body {
-  background: -webkit-linear-gradient(200deg, #00C4FF, #9D1BB2);
-  background: linear-gradient(205deg, #00C4FF, #9D1BB2);
+  background: -webkit-linear-gradient(200deg, #3300FF, #99FF66);
+  background: linear-gradient(205deg, #3300FF, #99FF66);
+  background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+                           linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+                           linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
   height: 100vh;
   margin: 0; 
   padding: 0;
