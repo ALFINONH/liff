@@ -1,1 +1,2 @@
-# master-liff
+# liff
+Public Liff
