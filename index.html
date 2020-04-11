@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
-<title>W3.CSS Template</title>
+<title>FINBOT 2016</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="mystyle.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -11,90 +11,129 @@
 h1,h2,h3,h4,h5,h6 {font-family: "Oswald"}
 body {font-family: "Open Sans"}
 </style>
-<body class="w3-light-grey">
+<body class="alfino-light-grey">
 
 <!-- Navigation bar with social media icons -->
-<div class="w3-bar w3-black w3-hide-small">
-  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-facebook-official"></i></a>
-  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-instagram"></i></a>
-  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-snapchat"></i></a>
-  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-flickr"></i></a>
-  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-twitter"></i></a>
-  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-linkedin"></i></a>
-  <a href="#" class="w3-bar-item w3-button w3-right"><i class="fa fa-search"></i></a>
+  </div>
+  <div class="alfino-display-topleft alfino-container alfino-small">
+    <p><button onclick="document.getElementById('menu').style.display='block'" class="alfino-button alfino-black">menu</button></p>
+    <p><button onclick="document.getElementById('contact').style.display='block'" class="alfino-button alfino-black">contact</button></p>
+  </div>
+
+<div id="menu" class="alfino-modal">
+  <div class="alfino-modal-content alfino-animate-zoom">
+    <div class="alfino-container alfino-black alfino-display-container">
+      <span onclick="document.getElementById('menu').style.display='none'" class="alfino-button alfino-display-topright alfino-large">x</span>
+      <h1>Help token</h1>
+    </div>
+    <div class="alfino-container">
+      <h5>Token <b>{on/off}</b></h5>
+      <h5>Token <b>{list of token type}</b></h5>
+      <h5>Primary <b>{your_authkey}</b></h5>
+    </div>
+    <div class="alfino-container alfino-black">
+      <h1>Main Media</h1>
+    </div>
+    <div class="alfino-container">
+      <h5>Get-smule <b>smuleId</b></h5>
+      <h5>Cuaca <b>Nama kota</b></h5>
+      <h5>Youtube <b>{by search title}</b></h5>
+      <h5>Mp3 <b>title</b></h5>
+      <h5>Joox <b>title</b></h5>
+    </div>
+    <div class="alfino-container alfino-black">
+    </div>
+  </div>
 </div>
 
-<div class="w3-content" style="max-width:1600px">
-  <header class="w3-container w3-center w3-padding-48 w3-white">
-    <h1 class="w3-xxxlarge"><b>FINBOT</b></h1>
-    <h6>Welcome to the blog of <span class="w3-tag">Alfinonh~ world</span></h6>
+<div id="contact" class="alfino-modal">
+  <div class="alfino-modal-content alfino-animate-zoom">
+    <div class="alfino-container alfino-black">
+      <span onclick="document.getElementById('contact').style.display='none'" class="alfino-button alfino-display-topright alfino-large">x</span>
+      <h1>Contact</h1>
+    </div>
+    <div class="alfino-container">
+      <p>Reserve now, ask for detail or just send us a message:</p>
+      <form action="/action_page.php" target="_blank">
+        <p><input class="alfino-input alfino-padding-16 alfino-border" type="text" placeholder="Name" required name="Name"></p>
+        <p><input class="alfino-input alfino-padding-16 alfino-border" type="number" placeholder="How many people" required name="People"></p>
+        <p><input class="alfino-input alfino-padding-16 alfino-border" type="datetime-local" placeholder="Date and time" required name="date" value="2020-04-11+07:00"></p>
+        <p><input class="alfino-input alfino-padding-16 alfino-border" type="text" placeholder="Message \ Special requirements" required name="Message"></p>
+        <p><button class="alfino-button" type="submit">SEND MESSAGE</button></p>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="alfino-content" style="max-width:1600px">
+  <header class="alfino-container alfino-center alfino-padding-48 alfino-white">
+    <h1 class="alfino-xxxlarge"><b>FINBOT</b></h1>
+    <h6>Welcome to the blog of <span class="alfino-tag">Alfinonh~ world</span></h6>
   </header>
 
   <!-- Image header -->
-  <header class="w3-display-container w3-wide" id="home">
-    <img class="w3-image" src="IMG_20200404_184858_261.jpg" alt="Jemboters Blog" width="1600" height="1060">
-    <div class="w3-display-left w3-padding-large">
-      <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>Jemboters BLOG</b></h1>
-      <h6><button class="w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off" onclick="document.getElementById('subscribe').style.display='block'">SUBSCRIBE</button></h6>
+  <header class="alfino-display-container alfino-wide" id="home">
+    <img class="alfino-image" src="IMG_20200404_184858_261.jpg" alt="Jemboters Blog" width="1600" height="1060">
+    <div class="alfino-display-left alfino-padding-large">
+      <h1 class="alfino-jumbo alfino-text-white alfino-hide-small"><b>Jemboters BLOG</b></h1>
+      <h6><button class="alfino-button alfino-white alfino-padding-large alfino-large alfino-opacity alfino-hover-opacity-off" onclick="document.getElementById('subscribe').style.display='block'">SUBSCRIBE</button></h6>
     </div>
   </header>
 
-  <!-- Grid -->
-  <div class="w3-row w3-padding w3-border">
+  <div class="alfino-row alfino-padding alfino-border">
 
     <!-- Blog entries -->
-    <div class="w3-col l8 s12">
+    <div class="alfino-col l8 s12">
     
       <!-- Blog entry -->
-      <div class="w3-container w3-white w3-margin w3-padding-large">
-        <div class="w3-center">
+      <div class="alfino-container alfino-white alfino-margin alfino-padding-large">
+        <div class="alfino-center">
           <h3>TITLE HEADING</h3>
-          <h5>Title description, <span class="w3-opacity">April 11, 2020</span></h5>
+          <h5>Title description, <span class="alfino-opacity">April 11, 2020</span></h5>
         </div>
 
-        <div class="w3-justify">
-          <img src="20190403_004603.png" alt="Days" style="width:100%" class="w3-padding-16">
+        <div class="alfino-justify">
+          <img src="20190403_004603.png" alt="Days" style="width:100%" class="alfino-padding-16">
           <p><strong>More !</strong> Semoga para jemboters puskun gara gara banchet dan semua feature dibatasi</p>
           <p>Hahaha</p>
-          <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
-          <p class="w3-right"><button class="w3-button w3-black" onclick="myFunction('demo1')" id="myBtn"><b>Replies  </b> <span class="w3-tag w3-white">1</span></button></p>
+          <p class="alfino-left"><button class="alfino-button alfino-white alfino-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
+          <p class="alfino-right"><button class="alfino-button alfino-black" onclick="myFunction('demo1')" id="myBtn"><b>Replies  </b> <span class="alfino-tag alfino-white">1</span></button></p>
 
-    <!-- About/Information menu -->
-    <div class="w3-col l4">
+    <div class="alfino-col l4">
       <!-- About Card -->
-      <div class="w3-white w3-margin">
-        <img src="IMG_20200404_184858_261.jpg" alt="Fino" style="width:100%" class="w3-grayscale">
-        <div class="w3-container w3-black">
+      <div class="alfino-white alfino-margin">
+        <img src="IMG_20200404_184858_261.jpg" alt="Fino" style="width:100%" class="alfino-grayscale">
+        <div class="alfino-container alfino-black">
           <h4>My Name</h4>
           <p> I'm just like a stupid boy.</p>
         </div>
       </div>
       <hr>
 
-      <div class="w3-white w3-margin">
-        <div class="w3-container w3-padding w3-black">
+      <div class="alfino-white alfino-margin">
+        <div class="alfino-container alfino-padding alfino-black">
           <h4>Follow Me</h4>
         </div>
-        <div class="w3-container w3-xlarge w3-padding">
-          <i class="fa fa-facebook-official w3-hover-opacity"></i>
-          <i class="fa fa-instagram w3-hover-opacity"></i>
-          <i class="fa fa-snapchat w3-hover-opacity"></i>
-          <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-          <i class="fa fa-twitter w3-hover-opacity"></i>
-          <i class="fa fa-linkedin w3-hover-opacity"></i>
+        <div class="alfino-container alfino-xlarge alfino-padding">
+          <i class="fa fa-facebook-official alfino-hover-opacity"></i>
+          <i class="fa fa-instagram alfino-hover-opacity"></i>
+          <i class="fa fa-snapchat alfino-hover-opacity"></i>
+          <i class="fa fa-pinterest-p alfino-hover-opacity"></i>
+          <i class="fa fa-twitter alfino-hover-opacity"></i>
+          <i class="fa fa-linkedin alfino-hover-opacity"></i>
         </div>
       </div>
       <hr>
       
       <!-- Subscribe -->
-      <div class="w3-white w3-margin">
-        <div class="w3-container w3-padding w3-black">
+      <div class="alfino-white alfino-margin">
+        <div class="alfino-container alfino-padding alfino-black">
           <h4>Subscribe</h4>
         </div>
-        <div class="w3-container w3-white">
+        <div class="alfino-container alfino-white">
           <p>Enter your e-mail below and get notified on the latest blog posts.</p>
-          <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail" style="width:100%"></p>
-          <p><button type="button" onclick="document.getElementById('subscribe').style.display='block'" class="w3-button w3-block w3-red">Subscribe</button></p>
+          <p><input class="alfino-input alfino-border" type="text" placeholder="Enter e-mail" style="width:100%"></p>
+          <p><button type="button" onclick="document.getElementById('subscribe').style.display='block'" class="alfino-button alfino-block alfino-red">Subscribe</button></p>
         </div>
       </div>
 
@@ -104,25 +143,25 @@ body {font-family: "Open Sans"}
   <!-- END GRID -->
   </div>
 
-<!-- END w3-content -->
+<!-- END alfino-content -->
 </div>
 
 <!-- Subscribe Modal -->
-<div id="subscribe" class="w3-modal w3-animate-opacity">
-  <div class="w3-modal-content" style="padding:32px">
-    <div class="w3-container w3-white">
-      <i onclick="document.getElementById('subscribe').style.display='none'" class="fa fa-remove w3-transparent w3-button w3-xlarge w3-right"></i>
-      <h2 class="w3-wide">SUBSCRIBE</h2>
+<div id="subscribe" class="alfino-modal alfino-animate-opacity">
+  <div class="alfino-modal-content" style="padding:32px">
+    <div class="alfino-container alfino-white">
+      <i onclick="document.getElementById('subscribe').style.display='none'" class="fa fa-remove alfino-transparent alfino-button alfino-xlarge alfino-right"></i>
+      <h2 class="alfino-wide">SUBSCRIBE</h2>
       <p>Join my mailing list to receive updates on the latest blog posts and other things.</p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail"></p>
-      <button type="button" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom" onclick="document.getElementById('subscribe').style.display='none'">Subscribe</button>
+      <p><input class="alfino-input alfino-border" type="text" placeholder="Enter e-mail"></p>
+      <button type="button" class="alfino-button alfino-block alfino-padding-large alfino-red alfino-margin-bottom" onclick="document.getElementById('subscribe').style.display='none'">Subscribe</button>
     </div>
   </div>
 </div>
 
 <!-- Footer -->
-<footer class="w3-container w3-dark-grey" style="padding:32px">
-  <a href="#" class="w3-button w3-black w3-padding-large w3-margin-bottom"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+<footer class="alfino-container alfino-dark-grey" style="padding:32px">
+  <a href="#" class="alfino-button alfino-black alfino-padding-large alfino-margin-bottom"><i class="fa fa-arrow-up alfino-margin-right"></i>To the top</a>
   <p>Powered by <a href="https://line.me/R/ti/p/~noe_404" target="_blank">Alfinonh</a></p>
 </footer>
 
